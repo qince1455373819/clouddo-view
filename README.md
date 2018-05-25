@@ -54,8 +54,7 @@ git clone
 假定项目已经下载下来了。
 
 第三步：启动服务端
-
-  
+https://gitee.com/lcg0124/clouddo.git
   
 第四步：启动前端
 （1）新开一个命令行窗口
@@ -73,5 +72,6 @@ git clone
 # build for production with minification
 npm run build
 
-
+系统截图
+![输入图片说明](https://gitee.com/uploads/images/2018/0525/155429_ef17fa22_1204498.png "屏幕截图.png")
 
