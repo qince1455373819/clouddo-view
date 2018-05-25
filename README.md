@@ -71,7 +71,7 @@ https://gitee.com/lcg0124/clouddo.git
 #正式环境编译命令
 # build for production with minification
 npm run build
-
+```
 
 ### 
 系统截图
