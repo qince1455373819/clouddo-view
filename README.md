@@ -72,6 +72,9 @@ https://gitee.com/lcg0124/clouddo.git
 # build for production with minification
 npm run build
 
+
+### 
 系统截图
+
 ![输入图片说明](https://gitee.com/uploads/images/2018/0525/155429_ef17fa22_1204498.png "屏幕截图.png")
 
