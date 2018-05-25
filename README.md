@@ -76,5 +76,6 @@ npm run build
 ### 
 系统截图
 
-![输入图片说明](https://gitee.com/uploads/images/2018/0525/155429_ef17fa22_1204498.png "屏幕截图.png")
+
+![输入图片说明](https://gitee.com/uploads/images/2018/0525/155648_1ce5d9b0_1204498.png "屏幕截图.png")
 
