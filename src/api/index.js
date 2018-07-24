@@ -1,8 +1,8 @@
 /**
  * Created by bootdo.
  */
-import Env from './env';
 import axios from 'axios'
+import store from "../vuex/store";
 import {
   bus
 } from '../bus.js'
@@ -18,6 +18,7 @@ axios.interceptors.request.use(
     if (window.localStorage.getItem('access-token')) {
       config.headers.Authorization = window.localStorage.getItem('access-token');
     }
+    store.state.loading = true
     return config
   },
   error => {
@@ -26,6 +27,7 @@ axios.interceptors.request.use(
 );
 // 添加一个响应拦截器
 axios.interceptors.response.use(function (response) {
+  store.state.loading = false
   if (response.data && response.data.code) {
     if (parseInt(response.data.code) === 401) {
       //未登录
@@ -35,15 +37,13 @@ axios.interceptors.response.use(function (response) {
 
   return response;
 }, function (error) {
+  store.state.loading = false
   // Do something with response error
   return Promise.reject(error);
 });
 
 //基地址
-let base = Env.baseURL;
-
-//测试使用
-export const ISDEV = Env.isDev;
+let base = process.env.API_ROOT
 
 
 //通用方法

@@ -1,5 +1,5 @@
 <template>
-  <el-container id="main" >
+  <el-container id="main" style="background-color: #f1f1f1">
     <el-header id="nav">
       <el-menu
         :default-active="activeIndex"

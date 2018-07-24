@@ -115,7 +115,16 @@ let router = new Router({
       ]
     },
 
-
+    {
+      path: '/',
+      component: Home,
+      name: '注册服务',
+      menuShow: true,
+      iconCls: 'iconfont icon-setting1',
+      children: [
+        {path: '/service',component: UserProfile,  redirect: 'http://baidu.com',target:'_blank',name: '个人信息', menuShow: true},
+      ]
+    },
   ]
 })
 

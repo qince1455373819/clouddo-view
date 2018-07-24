@@ -56,7 +56,12 @@
       </aside>
 
       <!--右侧内容区-->
-      <section class="content-container">
+      <!--右侧内容区-->
+      <section class="content-container" v-loading="$store.state.loading"
+               element-loading-text="拼命加载中"
+               element-loading-spinner="el-icon-loading"
+               element-loading-background="rgba(255, 255, 255, 0)"
+      >
         <div class="grid-content bg-purple-light">
           <el-col :span="24" class="content-wrapper">
             <transition name="fade" mode="out-in">
@@ -87,6 +92,7 @@
         }
         this.$router.push(url);
       });
+      this.defaultActiveIndex = this.$route.path
     },
     data() {
       return {
@@ -105,8 +111,12 @@
         this.collapsed = !this.collapsed;
       },
       jumpTo(url) {
-        this.defaultActiveIndex = url;
-        this.$router.push(url); //用go刷新
+        if (url.indexOf("http") != -1) {
+        } else {
+          this.defaultActiveIndex = url;
+          this.$router.push(url); //用go刷新
+        }
+
       },
       logout() {
         let that = this;
@@ -127,7 +137,8 @@
           .catch(() => {
 
           });
-      }
+      },
+
     },
     mounted() {
       this.menus = JSON.parse(window.localStorage.getItem('menus'));
