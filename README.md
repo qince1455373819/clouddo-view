@@ -1,5 +1,5 @@
 # clouddo-view
-> clouddo的前端系统 [输入链接说明](http://https://gitee.com/lcg0124/clouddo)
+> clouddo的前端系统(基于springcloud的管理系统) [https://gitee.com/lcg0124/clouddo](https://gitee.com/lcg0124/clouddo)
 
 ## 介绍
 
