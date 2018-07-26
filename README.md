@@ -1,5 +1,5 @@
 # clouddo-view
-> cloudo的前端系统
+> clouddo的前端系统 [输入链接说明](http://https://gitee.com/lcg0124/clouddo)
 
 ## 介绍
 
