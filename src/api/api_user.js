@@ -7,7 +7,7 @@ import * as API from './'
 export default {
   //登录
   login: params => {
-    return API.POST('/api-admin/login', params)
+    return API.POST('/api-admin/oauth/token', params)
   },
   //登出
   logout: params => {
