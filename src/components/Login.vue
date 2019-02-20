@@ -57,7 +57,7 @@
               .then(
                 function (result) {
                   that.loading = false;
-                  if (result && result.code === 0) {
+                  if (result) {
                     // localStorage.setItem(
                     //   "access-user",
                     //   JSON.stringify(result.user)
