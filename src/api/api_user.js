@@ -37,5 +37,9 @@ export default {
   //删除用户
   removeUser:params =>{
     return API.DELETE('/api-admin/user',params)
-  }
+  },
+
+  router: params =>{
+    return API.GET('/api-admin/router',params)
+  },
 }

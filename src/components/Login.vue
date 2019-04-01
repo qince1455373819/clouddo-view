@@ -48,11 +48,11 @@
             this.loading = true;
             let loginParams = new FormData();
             loginParams.append('client_id', 'app');
-            loginParams.append('client_secret','123456');
-            loginParams.append('grant_type','password');
-            loginParams.append('username',this.account.username);
-            loginParams.append('password',this.account.pwd);
-           ;
+            loginParams.append('client_secret', '123456');
+            loginParams.append('grant_type', 'password');
+            loginParams.append('username', this.account.username);
+            loginParams.append('password', this.account.pwd);
+            ;
             API.login(loginParams)
               .then(
                 function (result) {
@@ -62,7 +62,7 @@
                     //   "access-user",
                     //   JSON.stringify(result.user)
                     // );
-                    localStorage.setItem("access-token", result.token);
+                    localStorage.setItem("access-token", "bearer " + result.access_token);
                     console.log(result.router)
                     localStorage.setItem("menus", JSON.stringify(result.router));
                     localStorage.setItem("perms", JSON.stringify(result.perms))
@@ -143,6 +143,7 @@
       text-align: center;
       color: #505458;
     }
+
     .remember {
       margin: 0px 0px 35px 0px;
     }
