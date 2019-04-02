@@ -154,10 +154,10 @@
           .then(() => {
             //确认
             that.loading = true;
-            //
+            let token = localStorage.getItem("access-token")
             localStorage.removeItem("access-token");
             localStorage.removeItem("menus");
-            API.logout("").then(function (res) {
+            API.logout({token: token}).then(function (res) {
               that.$message.error({
                 showClose: true,
                 message: res.msg,
@@ -178,14 +178,14 @@
           that.menus = result.router;
         }
       )
-      // API.tokenUser()
-      //   .then(function (result) {
-      //     that.nickname = result.username;
-      //   })
-      //   .catch(() => {
-      //     localStorage.removeItem("access-token");
-      //     that.$router.go("/login"); //用go刷新
-      //   });
+      API.tokenUser()
+        .then(function (result) {
+          that.nickname = result.name;
+        })
+        .catch(() => {
+          localStorage.removeItem("access-token");
+          that.$router.go("/login"); //用go刷新
+        });
     }
   };
 </script>
